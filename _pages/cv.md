@@ -25,9 +25,9 @@ Education
 
 Research Experience
 ======
-* **Robot Perception and Learning Lab, UCL**, Oct 2024 - Present
+* **Humanoid Robotics Lab, UCL**, Oct 2024 - Present
   * PhD Researcher
-* **Department of Mechanical Engineering, University of Leeds**, Nov 2023 - Aug 2024
+* **Humanoid Robotics Lab, University of Leeds**, Nov 2023 - Aug 2024
   * PhD Researcher
 * **DRCL Dynamic Robotic and Control Lab, USC**, Jun 2021 - Jun 2023
   * Humanoid and quadruped locomotion using model-based control and reinforcement learning
