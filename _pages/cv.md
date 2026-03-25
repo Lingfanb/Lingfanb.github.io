@@ -11,54 +11,35 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* **Ph.D in Computer Science**, University College London (UCL), UK, Oct 2024 - Present
+  * Supervisor: Prof. Chengxu Zhou
+* **Ph.D in Mechanical Engineering**, University of Leeds, UK, Nov 2023 - Aug 2024
+  * Supervisor: Prof. Chengxu Zhou
+* **M.S. in Mechanical Engineering**, University of Southern California (USC), USA, Jan 2021 - Jan 2023
+  * GPA: 3.88/4.0
+  * Research Advisor: Prof. Quan Nguyen
+* **B.Eng. in Mechanical Engineering**, Technological University Dublin, Ireland, Sept 2019 - June 2020
+  * First-Class Honors, GPA: 3.71/4.0
+* **B.Eng. in Mechanical Engineering**, Nanjing Tech University, China, Sept 2016 - June 2019
+  * GPA: 3.50/4.0
 
-Work experience
+Research Experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* **Robot Perception and Learning Lab, UCL**, Oct 2024 - Present
+  * PhD Researcher
+* **Department of Mechanical Engineering, University of Leeds**, Nov 2023 - Aug 2024
+  * PhD Researcher
+* **DRCL Dynamic Robotic and Control Lab, USC**, Jun 2021 - Jun 2023
+  * Humanoid and quadruped locomotion using model-based control and reinforcement learning
+* **Tsinghua University, Dept. of Electrical Engineering**, Sep 2018 - May 2019
+  * Quadruped robot hardware and circuit design for obstacle avoidance
+* **Automation Robotic Lab, Nanjing Tech University**, Jul 2017 - Jun 2018
+  * Pneumatic tendon-based robotic arms
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* **Programming & Tools:** Python, C++, MATLAB, ROS, CAD, CREO/Pro.E
+* **Robotics:** Robot Dynamics and Control, Whole-Body Control (WBC), Model Predictive Control (MPC), Sim-to-Real Transfer
+* **Machine Learning:** Deep Reinforcement Learning, Imitation Learning, Diffusion Models
+* **Simulation:** MuJoCo, Isaac Sim
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
