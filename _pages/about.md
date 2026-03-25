@@ -19,6 +19,10 @@ Research Interests
 - **Generative Models for Robotics:** Diffusion models for expressive humanoid motion generation and motion planning
 - **Robot Manipulation:** Digital twins, dexterous robotic hands, and hand-object interaction
 
+Academic Service
+======
+- **Reviewer:** IEEE International Conference on Robotics and Automation (ICRA), IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), IEEE Transactions on Robotics (TRO), IEEE Robotics and Automation Letters (RA-L), IEEE/ASME Transactions on Mechatronics (TMECH)
+
 Personal
 ======
 I am originally from Zhejiang Province, China. Outside of research, I enjoy playing 🎮 video games, 🧗 bouldering, and 🏀 basketball.
