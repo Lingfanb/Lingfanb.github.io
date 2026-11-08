@@ -89,9 +89,7 @@
 .author__avatar {
   display: table-cell;
   vertical-align: top;
-  width: 36px;
-  // set width only, for non-square avatars
-  // height: 36px;
+  width: 72px; // same as the small-screen avatar below
 
   @include breakpoint($large) {
     display: block;
@@ -103,9 +101,11 @@
     border-radius: 50%;
     object-fit: cover;
     object-position: center 40%;
-    // small screens: avatar sits beside the name and bio, keep it compact
-    width: 110px;
-    height: 110px;
+    // small screens: a compact circle beside the name and bio. max-width: none
+    // stops the base img rule (max-width: 100%) from squeezing it into a sliver
+    width: 72px;
+    height: 72px;
+    max-width: none;
 
     @include breakpoint($large) {
       // never wider than the sidebar column, which can be narrower than 175px
