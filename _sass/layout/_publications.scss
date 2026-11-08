@@ -1,0 +1,156 @@
+/* ==========================================================================
+   PUBLICATIONS
+   Thumbnails, click-to-load videos, link buttons and homepage highlights
+   (see _includes/publication-*.html and assets/js/video-facade.js)
+   ========================================================================== */
+
+/* 16:9 box holding a YouTube cover or teaser image; becomes the player */
+
+.pub-media {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #000;
+
+  img,
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    margin: 0;
+    border: 0;
+    // fills the box and crops the black bars on YouTube's 4:3 covers
+    object-fit: cover;
+  }
+}
+
+a.pub-media:focus-visible {
+  outline: 2px solid var(--global-link-color);
+  outline-offset: 2px;
+}
+
+.pub-media__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 56px;
+  height: 40px;
+  margin: -20px 0 0 -28px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  transition: background 0.15s ease-in-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -9px 0 0 -6px;
+    border-style: solid;
+    border-width: 9px 0 9px 15px;
+    border-color: transparent transparent transparent #fff;
+  }
+}
+
+a.pub-media:hover .pub-media__play,
+a.pub-media:focus .pub-media__play {
+  background: #f00;
+}
+
+/* Publication list: thumbnail beside the text from small tablets up */
+
+.pub-item__media {
+  max-width: 400px;
+  margin: 1.5em 0 0.25em;
+}
+
+@include breakpoint($small) {
+  .pub-item--media {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25em;
+  }
+
+  .pub-item__media {
+    flex: 0 0 200px;
+  }
+
+  .pub-item__body {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
+
+/* Paper / Video / Project / Code buttons */
+
+// second selector outranks `.page__content p` on a paper's own page
+.pub-links,
+.page__content .pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin: 0.25em 0 1em;
+  font-size: $type-size-6;
+  line-height: 1.5;
+}
+
+.pub-links a.pub-links__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.2em 0.8em;
+  border: 1px solid var(--global-border-color);
+  border-radius: 999px;
+  color: var(--global-text-color);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    border-color: var(--global-link-color);
+    color: var(--global-link-color);
+    text-decoration: none;
+  }
+}
+
+/* Detail page of a paper: full-width player above the links */
+
+.page__content > .pub-media {
+  margin-bottom: 1em;
+}
+
+/* Homepage: Research Highlights grid */
+
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5em 1.25em;
+  margin: 1em 0 2em;
+
+  // nested so they outrank `.page__content p`
+  .highlights__title {
+    margin: 0.6em 0 0.2em;
+    font-size: 0.9em;
+    font-weight: bold;
+    line-height: 1.35;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .highlights__venue {
+    margin: 0;
+    font-size: $type-size-6;
+    color: var(--global-text-color-light);
+  }
+}

@@ -1,0 +1,34 @@
+{%- comment -%}
+  One entry in the publication list (used by archive-single.html).
+  Optional front matter on a paper in _publications/:
+    youtube:     YouTube video ID -> cover image that plays in place, plus a "Video" button
+    teaser:      thumbnail image from the site root, e.g. /images/publications/name.jpg
+    projecturl:  project page -> "Project" button
+    codeurl:     code repository -> "Code" button
+    venue_short: short venue for the homepage, e.g. 'ICRA 2025'
+    highlight:   true -> also shown under Research Highlights on the homepage
+{%- endcomment -%}
+{%- include base_path -%}
+{%- assign pub = include.pub -%}
+{%- assign pub_title = pub.title | markdownify | remove: "<p>" | remove: "</p>" | strip -%}
+{%- assign pub_excerpt = pub.excerpt | strip_html | strip -%}
+{%- capture pub_media -%}{% include publication-media.html pub=pub %}{%- endcapture -%}
+{%- assign pub_media = pub_media | strip -%}
+<div class="list__item">
+  <article class="archive__item pub-item{% if pub_media != '' %} pub-item--media{% endif %}" itemscope itemtype="http://schema.org/CreativeWork">
+    {%- if pub_media != '' %}
+    <div class="pub-item__media">{{ pub_media }}</div>
+    {%- endif %}
+    <div class="pub-item__body">
+      <h2 class="archive__item-title" itemprop="headline"><a href="{{ base_path }}{{ pub.url }}" rel="permalink">{{ pub_title }}</a></h2>
+      <p>Published in <i>{{ pub.venue }}</i>, {{ pub.date | default: "1900-01-01" | date: "%Y" }}</p>
+      {%- if pub_excerpt != '' %}
+      <p class="archive__item-excerpt" itemprop="description">{{ pub.excerpt | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+      {%- endif %}
+      {%- if pub.citation %}
+      <p>Recommended citation: {{ pub.citation }}</p>
+      {%- endif %}
+      {% include publication-links.html pub=pub %}
+    </div>
+  </article>
+</div>

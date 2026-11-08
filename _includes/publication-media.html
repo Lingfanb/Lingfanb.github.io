@@ -1,0 +1,28 @@
+{%- comment -%}
+  16:9 thumbnail for a paper (include.pub).
+  - With `youtube:` it shows the video's cover; clicking turns it into the
+    YouTube player (assets/js/video-facade.js). Without JavaScript it is a
+    plain link to the video on YouTube.
+  - With only `teaser:` (an image path from the site root) it shows that
+    image, linked to the paper's page unless static=true is passed.
+{%- endcomment -%}
+{%- include base_path -%}
+{%- assign pm = include.pub -%}
+{%- assign pm_img = nil -%}
+{%- if pm.teaser -%}
+  {%- if pm.teaser contains "://" -%}
+    {%- assign pm_img = pm.teaser -%}
+  {%- else -%}
+    {%- assign pm_img = pm.teaser | prepend: base_path -%}
+  {%- endif -%}
+{%- elsif pm.youtube -%}
+  {%- assign pm_img = pm.youtube | prepend: "https://i.ytimg.com/vi/" | append: "/hqdefault.jpg" -%}
+{%- endif -%}
+{%- assign pm_label = pm.title | strip_html | escape -%}
+{%- if pm_img and pm.youtube -%}
+<a class="pub-media pub-media--video" href="https://www.youtube.com/watch?v={{ pm.youtube }}" data-youtube="{{ pm.youtube }}" aria-label="Play video: {{ pm_label }}"><img src="{{ pm_img }}" alt="" loading="lazy" decoding="async"><span class="pub-media__play" aria-hidden="true"></span></a>
+{%- elsif pm_img and include.static -%}
+<div class="pub-media"><img src="{{ pm_img }}" alt="{{ pm_label }}" loading="lazy" decoding="async"></div>
+{%- elsif pm_img -%}
+<a class="pub-media" href="{{ base_path }}{{ pm.url }}" tabindex="-1" aria-hidden="true"><img src="{{ pm_img }}" alt="" loading="lazy" decoding="async"></a>
+{%- endif -%}

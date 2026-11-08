@@ -7,5 +7,8 @@ excerpt: ''
 date: 2025-05-01
 venue: '2025 IEEE International Conference on Robotics and Automation (ICRA)'
 paperurl: 'https://arxiv.org/pdf/2408.02619'
+youtube: 'zbEB5bMBgY0'
+venue_short: 'ICRA 2025'
+highlight: true
 citation: 'C. Nguyen*, <b>L. Bao*</b>, Q. Nguyen. (2025). &quot;Mastering Agile Jumping Skills from Simple Practices with Iterative Learning Control.&quot; <i>2025 IEEE International Conference on Robotics and Automation (ICRA)</i>. (* Equal contribution)'
 ---

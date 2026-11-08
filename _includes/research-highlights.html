@@ -1,0 +1,16 @@
+{%- comment -%}
+  Homepage grid of papers marked `highlight: true` in _publications/, newest first.
+{%- endcomment -%}
+{%- include base_path -%}
+{%- assign hl_pubs = site.publications | where: "highlight", true | sort: "date" | reverse -%}
+{%- if hl_pubs.size > 0 -%}
+<div class="highlights">
+{%- for hl_pub in hl_pubs %}
+  <div class="highlights__item">
+    {% include publication-media.html pub=hl_pub %}
+    <p class="highlights__title"><a href="{{ base_path }}{{ hl_pub.url }}">{{ hl_pub.title }}</a></p>
+    <p class="highlights__venue">{% if hl_pub.venue_short %}{{ hl_pub.venue_short }}{% else %}{{ hl_pub.venue }}, {{ hl_pub.date | date: "%Y" }}{% endif %}</p>
+  </div>
+{%- endfor %}
+</div>
+{%- endif -%}

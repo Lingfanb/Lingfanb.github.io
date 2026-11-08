@@ -7,5 +7,8 @@ excerpt: ''
 date: 2024-01-01
 venue: 'Annual Conference Towards Autonomous Robotic Systems (TAROS)'
 paperurl: 'https://arxiv.org/pdf/2407.02282'
+youtube: 'JYD1RlrQRWM'
+venue_short: 'TAROS 2024'
+highlight: true
 citation: 'T. Peng, <b>L. Bao</b>, J. Humphreys, A.M. Delfaki, D. Kanoulas, C. Zhou. (2024). &quot;Learning Bipedal Walking on a Quadruped Robot via Adversarial Motion Priors.&quot; <i>Annual Conference Towards Autonomous Robotic Systems (TAROS)</i>.'
 ---
