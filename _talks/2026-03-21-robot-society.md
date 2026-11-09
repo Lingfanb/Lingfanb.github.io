@@ -1,13 +1,13 @@
 ---
-title: "Talk at UCL Robot Society"
+title: "Talk at UCL Robotics Society"
 collection: talks
 type: "Talk"
 permalink: /talks/2026-03-21-robot-society
-venue: "UCL Robot Society"
+venue: "UCL Robotics Society"
 date: 2026-03-21
 location: "London, UK"
 ---
 
-Talk at [UCL Robot Society](https://uclrobotics.co.uk/).
+Talk at the [UCL Robotics Society](https://studentsunionucl.org/clubs-societies/robotics-society).
 
-<img src="/images/robot_society.jpeg" alt="Robot Society Talk" style="max-width: 50%; height: auto;">
+<img src="/images/robot_society.jpeg" alt="UCL Robotics Society talk" style="max-width: 50%; height: auto;">

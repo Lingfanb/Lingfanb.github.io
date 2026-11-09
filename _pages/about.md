@@ -9,7 +9,7 @@ redirect_from:
 
 I am a PhD student in Computer Science at [University College London (UCL)](https://www.ucl.ac.uk/), supervised by [Prof. Chengxu Zhou](https://scholar.google.com/citations?user=ZNeLJBgAAAAJ). I am a member of the [Humanoid Robotics Lab](https://ucl-humanoid.github.io/). My research focuses on **humanoid robot locomotion and manipulation**, with a particular emphasis on reinforcement learning, imitation learning, and diffusion models for humanoid and quadruped robots.
 
-Prior to UCL, I was a PhD researcher in Mechanical Engineering at the [University of Leeds](https://www.leeds.ac.uk/) (2023–2024), also supervised by Prof. Chengxu Zhou. I received my M.S. in Mechanical Engineering from the [University of Southern California (USC)](https://www.usc.edu/) in 2023, where I worked with [Prof. Quan Nguyen](https://scholar.google.com/citations?user=s5_69i0AAAAJ) at the Dynamic Robotics and Control Lab (DRCL) on trajectory optimization and model predictive control for legged robots. I hold a B.Eng. in Mechanical Engineering from [Technological University Dublin](https://www.tudublin.ie/) (First-Class Honours) and [Nanjing Tech University](https://www.njtech.edu.cn/).
+Before my PhD, I received my M.S. in Mechanical Engineering from the [University of Southern California (USC)](https://www.usc.edu/) in 2023, where I worked with [Prof. Quan Nguyen](https://scholar.google.com/citations?user=s5_69i0AAAAJ) at the Dynamic Robotics and Control Lab (DRCL) on trajectory optimization and model predictive control for legged robots. I hold a B.Eng. in Mechanical Engineering from [Technological University Dublin](https://www.tudublin.ie/) (First-Class Honours) and [Nanjing Tech University](https://www.njtech.edu.cn/).
 
 
 Research Highlights
@@ -36,7 +36,7 @@ News
 ======
 * **[2026.10.14]** 📄 New preprint on arXiv: [Beyond Kinematic Tracking: Preserving Expressive Characteristics in Humanoid Whole-Body Control](https://arxiv.org/abs/2610.19393).
 * **[2026.08.28]** 📄 New preprint on arXiv: [PAMoR: Parameterized Affective Motion Generation in Real Time for Humanoid Robots](https://arxiv.org/abs/2608.28213).
-* **[2026.03.21]** 🎤 Gave a [talk](/talks/2026-03-21-robot-society) at the UCL Robot Society.
+* **[2026.03.21]** 🎤 Gave a [talk](/talks/2026-03-21-robot-society) at the UCL Robotics Society.
 * **[2026.02.14]** 🎉 Featured in the UCL Computer Science [Valentine's Day showcase](https://www.linkedin.com/posts/ucl-computer-science_happy-valentines-day-from-ucl-computer-science-activity-7428005771805745152-dLHF/).
 * **[2026.02.10]** 🎤 Coordinated the UCL–NVIDIA Robotics Day and gave a [research showcase](/talks/ucl-nvidia-robotics-day).
 * **[2025.04.08]** 🤖 Our humanoid robot 'Easton' is featured on [UCL Engineering News](https://www.ucl.ac.uk/engineering/news/ucl-welcomes-humanoid-robot-advance-embodied-ai-research) — advancing embodied AI research at UCL East.
