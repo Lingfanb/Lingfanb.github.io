@@ -36,6 +36,8 @@ layout: default
         
         {% if page.collection == 'teaching' %}
           <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+        {% elsif page.collection == 'publications' %}
+          {% include publication-meta.html pub=page %}
         {% elsif page.venue and page.date %}
           <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.date %}
@@ -46,10 +48,21 @@ layout: default
 
       <section class="page__content" itemprop="text">
         {% if page.collection == 'publications' %}
-          {% include publication-media.html pub=page static=true %}
-          {{ content }}
           {% include publication-links.html pub=page %}
-          {% if page.citation %}<p style="font-size: smaller">Recommended citation: {{ page.citation }}</p>{% endif %}
+          {% include publication-media.html pub=page static=true %}
+          {% comment %}the body of a paper's file is its abstract{% endcomment %}
+          {% assign pub_abstract = content | strip_html | strip %}
+          {% if pub_abstract != '' %}
+            <h2 id="abstract">Abstract</h2>
+            {{ content }}
+          {% endif %}
+          {% if page.bibtex %}
+            <h2 id="bibtex">Citation</h2>
+            {% if page.citation %}<p>{{ page.citation }}</p>{% endif %}
+            <pre class="pub-bibtex"><code>{{ page.bibtex | strip | escape }}</code></pre>
+          {% elsif page.citation %}
+            <p style="font-size: smaller">Recommended citation: {{ page.citation }}</p>
+          {% endif %}
         {% else %}
         {{ content }}
 

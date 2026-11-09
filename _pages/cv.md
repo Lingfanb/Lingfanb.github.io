@@ -9,17 +9,19 @@ redirect_from:
 
 {% include base_path %}
 
+<p><a class="btn" href="{{ base_path }}/files/CV_Lingfan_Bao.pdf"><i class="fas fa-file-pdf" aria-hidden="true"></i> Download CV (PDF)</a></p>
+
 Education
 ======
-* **Ph.D in Computer Science**, University College London (UCL), UK, Oct 2024 - Present
+* **PhD in Computer Science**, University College London (UCL), UK, Oct 2024 - Present
   * Supervisor: Prof. Chengxu Zhou
-* **Ph.D in Mechanical Engineering**, University of Leeds, UK, Nov 2023 - Aug 2024
+* **PhD in Mechanical Engineering**, University of Leeds, UK, Nov 2023 - Aug 2024
   * Supervisor: Prof. Chengxu Zhou
 * **M.S. in Mechanical Engineering**, University of Southern California (USC), USA, Jan 2021 - Jan 2023
   * GPA: 3.88/4.0
   * Research Advisor: Prof. Quan Nguyen
 * **B.Eng. in Mechanical Engineering**, Technological University Dublin, Ireland, Sept 2019 - June 2020
-  * First-Class Honors, GPA: 3.71/4.0
+  * First-Class Honours, GPA: 3.71/4.0
 * **B.Eng. in Mechanical Engineering**, Nanjing Tech University, China, Sept 2016 - June 2019
   * GPA: 3.50/4.0
 

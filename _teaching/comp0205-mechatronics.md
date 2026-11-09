@@ -8,4 +8,6 @@ date: 2025-01-01
 location: "London, UK"
 ---
 
+**Role:** Teaching Assistant
+
 Mechatronics is an interdisciplinary field that combines mechanical engineering, electronics, computer science, and control systems, and is crucially important for modern society. In this module, students will learn to design and analyse integrated robotic systems, solve problems and investigate case studies, obtain vital hands-on experience while working with practical small-scale manufacturing hardware, and study various aspects of ethics in application to robotics and AI systems.

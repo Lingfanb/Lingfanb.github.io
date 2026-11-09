@@ -1,0 +1,20 @@
+{%- comment -%}
+  Author and venue lines for a paper (include.pub): under each title in the
+  publication list, and under the title on the paper's own page.
+    authors: e.g. 'C. Nguyen*, <b>L. Bao*</b>, Q. Nguyen' (* = equal contribution)
+    venue:   a venue starting with "arXiv preprint" is shown as a preprint
+{%- endcomment -%}
+{%- assign pmeta = include.pub -%}
+{%- assign pmeta_year = pmeta.date | default: "1900-01-01" | date: "%Y" -%}
+{%- if pmeta.authors %}
+<p class="pub-meta pub-meta__authors">{{ pmeta.authors }}{% if pmeta.authors contains "*" %} <span class="pub-meta__note">(* equal contribution)</span>{% endif %}</p>
+{%- endif %}
+{%- if pmeta.venue %}
+<p class="pub-meta pub-meta__venue">
+  {%- if pmeta.venue contains "arXiv preprint" -%}
+    Preprint, <i>{{ pmeta.venue | remove_first: "arXiv preprint " }}</i>, {{ pmeta_year }}
+  {%- else -%}
+    Published in <i>{{ pmeta.venue }}</i>, {{ pmeta_year }}
+  {%- endif -%}
+</p>
+{%- endif %}
