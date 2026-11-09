@@ -35,6 +35,7 @@ I am originally from Zhejiang Province, China. Outside of research, I enjoy play
 News
 ======
 * **[2026.10.14]** 📄 New preprint on arXiv: [Beyond Kinematic Tracking: Preserving Expressive Characteristics in Humanoid Whole-Body Control](https://arxiv.org/abs/2610.19393).
+* **[2026.10.07]** 🎤 Gave a [talk](/talks/2026-10-07-physical-io) on expressive humanoid motion at [Physical I/O](https://www.physical-io.com/), London's physical AI community.
 * **[2026.08.28]** 📄 New preprint on arXiv: [PAMoR: Parameterized Affective Motion Generation in Real Time for Humanoid Robots](https://arxiv.org/abs/2608.28213).
 * **[2026.03.21]** 🎤 Gave a [talk](/talks/2026-03-21-robot-society) at the UCL Robotics Society.
 * **[2026.02.14]** 🎉 Featured in the UCL Computer Science [Valentine's Day showcase](https://www.linkedin.com/posts/ucl-computer-science_happy-valentines-day-from-ucl-computer-science-activity-7428005771805745152-dLHF/).
