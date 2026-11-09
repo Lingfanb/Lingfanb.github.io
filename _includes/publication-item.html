@@ -1,21 +1,29 @@
 {%- comment -%}
-  One entry in the publication list (used by archive-single.html).
+  One entry in the publication list (used by archive-single.html) and in
+  Research Highlights. Pass media=true to show the video or teaser on the left;
+  the publication list leaves it out and keeps only the "Video" button.
   Optional front matter on a paper in _publications/:
     authors:     author line, e.g. 'C. Nguyen*, <b>L. Bao*</b>, Q. Nguyen' (* = equal contribution)
-    youtube:     YouTube video ID -> cover image that plays in place, plus a "Video" button
+    youtube:     YouTube video ID -> cover image that plays in place (highlights and the
+                 paper's own page), plus a "Video" button
     teaser:      thumbnail image from the site root, e.g. /images/publications/name.jpg
     projecturl:  project page -> "Project" button
     codeurl:     code repository -> "Code" button
     bibtex:      BibTeX entry, shown on the paper's page -> "BibTeX" button
     highlight:   true -> also listed under Research Highlights on the homepage
+    highlight_top: true -> listed in the top group of Research Highlights even
+                 without first or co-first authorship (see research-highlights.html)
   A venue starting with "arXiv preprint" is listed as a preprint. The abstract
   goes in the body of the paper's file and is shown on the paper's own page.
 {%- endcomment -%}
 {%- include base_path -%}
 {%- assign pub = include.pub -%}
 {%- assign pub_title = pub.title | markdownify | remove: "<p>" | remove: "</p>" | strip -%}
-{%- capture pub_media -%}{% include publication-media.html pub=pub %}{%- endcapture -%}
-{%- assign pub_media = pub_media | strip -%}
+{%- assign pub_media = "" -%}
+{%- if include.media -%}
+  {%- capture pub_media -%}{% include publication-media.html pub=pub %}{%- endcapture -%}
+  {%- assign pub_media = pub_media | strip -%}
+{%- endif -%}
 <div class="list__item">
   <article class="archive__item pub-item{% if pub_media != '' %} pub-item--media{% endif %}" itemscope itemtype="http://schema.org/CreativeWork">
     {%- if pub_media != '' %}

@@ -1,14 +1,29 @@
 {%- comment -%}
-  Homepage list of papers marked `highlight: true` in _publications/, newest
-  first, one per row: the video on the left; title, authors, venue and links on
-  the right (stacked on small screens). Each row is the same entry as on the
-  publication list (publication-item.html), with a larger video.
+  Homepage list of papers marked `highlight: true` in _publications/, one per
+  row: the video on the left; title, authors, venue and links on the right
+  (stacked on small screens). Each row is the same entry as on the publication
+  list (publication-item.html), with the video shown.
+  Order: first the papers where L. Bao is first or co-first author (author line
+  starting with "<b>L. Bao", or containing "L. Bao*"), plus any paper marked
+  `highlight_top: true`; then the other collaborations. Newest first in each group.
 {%- endcomment -%}
-{%- assign hl_pubs = site.publications | where: "highlight", true | sort: "date" | reverse -%}
+{%- assign hl_all = site.publications | where: "highlight", true | sort: "date" | reverse -%}
+{%- assign hl_top = "" | split: "" -%}
+{%- assign hl_rest = "" | split: "" -%}
+{%- for hl_pub in hl_all -%}
+  {%- assign hl_authors = hl_pub.authors | default: "" | strip -%}
+  {%- assign hl_start = hl_authors | slice: 0, 9 -%}
+  {%- if hl_pub.highlight_top or hl_start == "<b>L. Bao" or hl_authors contains "L. Bao*" -%}
+    {%- assign hl_top = hl_top | push: hl_pub -%}
+  {%- else -%}
+    {%- assign hl_rest = hl_rest | push: hl_pub -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign hl_pubs = hl_top | concat: hl_rest -%}
 {%- if hl_pubs.size > 0 -%}
 <div class="highlights">
 {%- for hl_pub in hl_pubs %}
-  {% include publication-item.html pub=hl_pub %}
+  {% include publication-item.html pub=hl_pub media=true %}
 {%- endfor %}
 </div>
 {%- endif -%}
