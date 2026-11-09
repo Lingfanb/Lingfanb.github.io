@@ -147,33 +147,41 @@ a.pub-media:focus .pub-media__play {
   overflow-x: auto;
 }
 
-/* Homepage: Research Highlights grid */
+/* Homepage: Research Highlights, one paper per row (the same entry as the
+   publication list, with a larger video) */
 
 .highlights {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1.5em 1.25em;
   margin: 1em 0 2em;
 
-  // nested so they outrank `.page__content p`
-  .highlights__title {
-    margin: 0.6em 0 0.2em;
-    font-size: 0.9em;
-    font-weight: bold;
-    line-height: 1.35;
-
-    a {
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+  .list__item + .list__item {
+    margin-top: 1.75em;
   }
 
-  .highlights__venue {
-    margin: 0;
+  // nested so they outrank `.page__content h2` and `.page__content p`
+  .archive__item-title {
+    margin: 0 0 0.35em;
+    padding-bottom: 0;
+    border-bottom: 0;
+    font-size: $type-size-5;
+    line-height: 1.35;
+  }
+
+  .pub-meta {
+    margin: 0 0 0.3em;
     font-size: $type-size-6;
-    color: var(--global-text-color-light);
+  }
+
+  .pub-links {
+    margin-bottom: 0;
+  }
+
+  .pub-item__media {
+    margin-top: 0;
+  }
+
+  @include breakpoint($small) {
+    .pub-item__media {
+      flex-basis: 280px;
+    }
   }
 }

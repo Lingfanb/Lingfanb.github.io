@@ -57,11 +57,8 @@ layout: default
             {{ content }}
           {% endif %}
           {% if page.bibtex %}
-            <h2 id="bibtex">Citation</h2>
-            {% if page.citation %}<p>{{ page.citation }}</p>{% endif %}
+            <h2 id="bibtex">BibTeX</h2>
             <pre class="pub-bibtex"><code>{{ page.bibtex | strip | escape }}</code></pre>
-          {% elsif page.citation %}
-            <p style="font-size: smaller">Recommended citation: {{ page.citation }}</p>
           {% endif %}
         {% else %}
         {{ content }}

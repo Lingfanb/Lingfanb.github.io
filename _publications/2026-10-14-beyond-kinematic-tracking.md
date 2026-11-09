@@ -7,6 +7,8 @@ excerpt: ''
 date: 2026-10-14
 venue: 'arXiv preprint arXiv:2610.19393'
 paperurl: 'https://arxiv.org/pdf/2610.19393'
+youtube: '5EmDvZdKiBY'
+highlight: true
 authors: '<b>L. Bao</b>, H. Zhu, Y. Pan, J. Wang, J. Yu, T. Peng, Y. Jia, D. Kanoulas, C. Zhou'
 citation: '<b>L. Bao</b>, H. Zhu, Y. Pan, J. Wang, J. Yu, T. Peng, Y. Jia, D. Kanoulas, C. Zhou. (2026). &quot;Beyond Kinematic Tracking: Preserving Expressive Characteristics in Humanoid Whole-Body Control.&quot; <i>arXiv preprint arXiv:2610.19393</i>.'
 bibtex: |

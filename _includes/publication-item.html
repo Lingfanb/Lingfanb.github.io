@@ -7,8 +7,7 @@
     projecturl:  project page -> "Project" button
     codeurl:     code repository -> "Code" button
     bibtex:      BibTeX entry, shown on the paper's page -> "BibTeX" button
-    venue_short: short venue for the homepage, e.g. 'ICRA 2025'
-    highlight:   true -> also shown under Research Highlights on the homepage
+    highlight:   true -> also listed under Research Highlights on the homepage
   A venue starting with "arXiv preprint" is listed as a preprint. The abstract
   goes in the body of the paper's file and is shown on the paper's own page.
 {%- endcomment -%}
@@ -25,9 +24,6 @@
     <div class="pub-item__body">
       <h2 class="archive__item-title" itemprop="headline"><a href="{{ base_path }}{{ pub.url }}" rel="permalink">{{ pub_title }}</a></h2>
       {% include publication-meta.html pub=pub %}
-      {%- unless pub.authors %}{% if pub.citation %}
-      <p>Recommended citation: {{ pub.citation }}</p>
-      {%- endif %}{% endunless %}
       {% include publication-links.html pub=pub %}
     </div>
   </article>
